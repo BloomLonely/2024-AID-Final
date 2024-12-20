@@ -251,7 +251,6 @@ if student_id:
 st.write(solution1)
 if student_id:
     if data is not None:
-        st.subheader("Question1. Student's Detailed Score")
         st.markdown("#### Question1. Student's Detailed Score")
         student_answers = data[["1 - a", "1 - b", "1 - c", "1 - d", "1 - e", "1 - 10p"]].copy()
         st.dataframe(student_answers, hide_index=True)
@@ -259,7 +258,7 @@ if student_id:
 st.write(solution2)
 if student_id:
     if data is not None:
-        st.subheader("Question2. Student's Detailed Score")
+        st.markdown("#### Question2. Student's Detailed Score")
         student_answers = data[["2 - a", "2 - b", "2 - c", "2 - d", "2 - 8p"]].copy()
         st.dataframe(student_answers, hide_index=True)
 
@@ -267,7 +266,7 @@ st.write(solution3)
 if student_id:
     data = get_student_data(student_id)
     if data is not None:
-        st.subheader("Question3. Student's Detailed Score")
+        st.markdown("#### Question3. Student's Detailed Score")
         student_answers = data[["3 - a", "3 - b", "3 - c", "3 - 10p"]]
         st.dataframe(student_answers, hide_index=True)
 
@@ -275,7 +274,7 @@ st.write(solution4)
 if student_id:
     data = get_student_data(student_id)
     if data is not None:
-        st.subheader("Question4. Student's Detailed Score")
+        st.markdown("#### Question4. Student's Detailed Score")
         student_answers = data[["4 - a", "4 - b", "4 - 8p"]]
         st.dataframe(student_answers, hide_index=True)
 
@@ -283,7 +282,7 @@ st.write(solution5)
 if student_id:
     data = get_student_data(student_id)
     if data is not None:
-        st.subheader("Question5. Student's Detailed Score")
+        st.markdown("#### Question5. Student's Detailed Score")
         student_answers = data[["5 - a", "5 - b", "5 - 10p"]]
         st.dataframe(student_answers, hide_index=True)
 
@@ -291,7 +290,7 @@ st.write(solution6)
 if student_id:
     data = get_student_data(student_id)
     if data is not None:
-        st.subheader("Question6. Student's Detailed Score")
+        st.markdown("#### Question6. Student's Detailed Score")
         student_answers = data[["6 - a", "6 - b", "6 - c", "6 - 14p"]]
         st.dataframe(student_answers, hide_index=True)
 
@@ -299,7 +298,7 @@ st.write(solution7)
 if student_id:
     data = get_student_data(student_id)
     if data is not None:
-        st.subheader("Question7. Student's Detailed Score")
+        st.markdown("#### Question7. Student's Detailed Score")
         student_answers = data[["7 - a", "7 - b", "7 - 15p"]]
         st.dataframe(student_answers, hide_index=True)
 
@@ -307,7 +306,7 @@ st.write(solution8)
 if student_id:
     data = get_student_data(student_id)
     if data is not None:
-        st.subheader("Question8. Student's Detailed Score")
+        st.markdown("#### Question8. Student's Detailed Score")
         student_answers = data[["8 - a", "8 - b", "8 - 12p"]]
         st.dataframe(student_answers, hide_index=True)
 
@@ -315,6 +314,6 @@ st.write(solution9)
 if student_id:
     data = get_student_data(student_id)
     if data is not None:
-        st.subheader("Question9. Student's Detailed Score")
+        st.markdown("#### Question9. Student's Detailed Score")
         student_answers = data[["9 - a", "9 - b", "9 - c", "9 - 13p"]]
         st.dataframe(student_answers, hide_index=True)
