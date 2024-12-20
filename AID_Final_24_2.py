@@ -386,10 +386,9 @@ if student_id:
     data = get_student_data(student_id)
     
     if data is not None:
-        to_show = data.set_index("e-mail")
-        st.write("E-mail: ", to_show.index[0])
-        s = to_show.style.format({"Expense": lambda x : '{:.4f}'.format(x)})
-        st.dataframe(s, hide_index=True)
+        filtered_data = data[["Name", "Student ID", "1 - 10p", "2 - 8p", "3 - 10p", "4 - 8p", "5 - 10p", "6 - 14p", "7 - 15p", "8 - 12p", "9 - 13p", "총점"]]
+        st.write("E-mail: ", student_id)
+        st.dataframe(filtered_data, hide_index=True)
     else:
         st.write(f"No data found for email: {student_id}")
         
