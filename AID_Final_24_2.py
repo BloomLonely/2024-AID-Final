@@ -439,7 +439,7 @@ if student_id:
         """
 
         # Append rows to the table
-        for _, row in q2_answers.iterrows():
+        for _, row in student_answers.iterrows():
             q2_html += "<tr>"
             for cell in row:
                 q2_html += f"<td>{cell}</td>"
