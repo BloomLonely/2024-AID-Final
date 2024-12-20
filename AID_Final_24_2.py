@@ -410,6 +410,20 @@ if student_id:
         for col in student_answers.columns:
             student_answers[col] = student_answers[col].apply(lambda x: str(x).replace("\n", "<br>") if pd.notna(x) else "")
         q2_html = student_answers.to_html(escape=False, index=False)
+        q2_html = f"""
+        <style>
+            table {{
+                width: 100%;
+                border-collapse: collapse;
+            }}
+            th, td {{
+                text-align: center;
+                border: 1px solid black;
+                padding: 8px;
+            }}
+        </style>
+        {q2_html}
+        """
         st.markdown(q2_html, unsafe_allow_html=True)
 
 # st.write(solution3)
