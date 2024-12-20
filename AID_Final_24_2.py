@@ -392,10 +392,10 @@ if student_id:
         st.dataframe(filtered_data, hide_index=True)
     else:
         st.write(f"No data found for email: {student_id}")
-        
+
+
 st.write(solution1)
 if student_id:
-    data = get_student_data(student_id)
     if data is not None:
         st.subheader("Question1. Student's Detailed Score")
         student_answers = data[["1 - a", "1 - b", "1 - c", "1 - d", "1 - e"]].copy()
@@ -403,14 +403,10 @@ if student_id:
 
 st.write(solution2)
 if student_id:
-    data = get_student_data(student_id)
     if data is not None:
-        st.subheader("Question2. Student's Answer")
+        st.subheader("Question2. Student's Detailed Score")
         student_answers = data[["2 - a", "2 - b", "2 - c", "2 - d"]].copy()
-        for col in student_answers.columns:
-            student_answers[col] = student_answers[col].apply(lambda x: str(x).replace("\n", "<br>") if pd.notna(x) else "")
-        q2_html = student_answers.to_html(escape=False, index=False)
-        st.markdown(q2_html, unsafe_allow_html=True)
+        st.dataframe(student_answers, hide_index=True)
 
 # st.write(solution3)
 # if student_id:
