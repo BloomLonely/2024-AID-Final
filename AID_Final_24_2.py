@@ -415,8 +415,13 @@ if student_id:
                 width: 100%;
                 border-collapse: collapse;
             }
-            th, td {
-                text-align: center;
+            th {
+                text-align: center; /* Center align headers */
+                border: 1px solid black;
+                padding: 8px;
+            }
+            td {
+                text-align: left; /* Default alignment for cells */
                 border: 1px solid black;
                 padding: 8px;
             }
@@ -434,7 +439,7 @@ if student_id:
         """
 
         # Append rows to the table
-        for _, row in student_answers.iterrows():
+        for _, row in q2_answers.iterrows():
             q2_html += "<tr>"
             for cell in row:
                 q2_html += f"<td>{cell}</td>"
