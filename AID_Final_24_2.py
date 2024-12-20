@@ -397,12 +397,9 @@ st.write(solution1)
 if student_id:
     data = get_student_data(student_id)
     if data is not None:
-        st.subheader("Question1. Student's Answer")
+        st.subheader("Question1. Student's Detailed Score")
         student_answers = data[["1 - a", "1 - b", "1 - c", "1 - d", "1 - e"]].copy()
-        for col in student_answers.columns:
-            student_answers[col] = student_answers[col].apply(lambda x: str(x).replace("\n", "<br>") if pd.notna(x) else "")
-        q1_html = student_answers.to_html(escape=False, index=False)
-        st.markdown(q1_html, unsafe_allow_html=True)
+        st.dataframe(student_answers, hide_index=True)
 
 st.write(solution2)
 if student_id:
