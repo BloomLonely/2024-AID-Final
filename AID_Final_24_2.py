@@ -387,6 +387,7 @@ if student_id:
     
     if data is not None:
         filtered_data = data[["Name", "Student ID", "1 - 10p", "2 - 8p", "3 - 10p", "4 - 8p", "5 - 10p", "6 - 14p", "7 - 15p", "8 - 12p", "9 - 13p", "총점"]]
+        filtered_data["Student ID"] = filtered_data["Student ID"].astype(str)
         st.write("E-mail: ", student_id)
         st.dataframe(filtered_data, hide_index=True)
     else:
