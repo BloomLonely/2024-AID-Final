@@ -409,46 +409,7 @@ if student_id:
         student_answers = data[["2 - a", "2 - b", "2 - c", "2 - d"]].copy()
         for col in student_answers.columns:
             student_answers[col] = student_answers[col].apply(lambda x: str(x).replace("\n", "<br>") if pd.notna(x) else "")
-        q2_html = """
-        <style>
-            table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-            th {
-                text-align: center; /* Center align headers */
-                border: 1px solid black;
-                padding: 8px;
-            }
-            td {
-                text-align: left; /* Default alignment for cells */
-                border: 1px solid black;
-                padding: 8px;
-            }
-        </style>
-        <table>
-            <thead>
-                <tr>
-                    <th>2 - a</th>
-                    <th>2 - b</th>
-                    <th>2 - c</th>
-                    <th>2 - d</th>
-                </tr>
-            </thead>
-            <tbody>
-        """
-
-        # Append rows to the table
-        for _, row in student_answers.iterrows():
-            q2_html += "<tr>"
-            for cell in row:
-                q2_html += f"<td>{cell}</td>"
-            q2_html += "</tr>"
-
-        q2_html += """
-            </tbody>
-        </table>
-        """
+        q2_html = student_answers.to_html(escape=False, index=False)
         st.markdown(q2_html, unsafe_allow_html=True)
 
 # st.write(solution3)
