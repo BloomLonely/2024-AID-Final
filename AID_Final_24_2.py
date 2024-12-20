@@ -399,5 +399,5 @@ if student_id:
     data = get_student_data(student_id)
     if data is not None:
         st.subheader("Student's Answer")
-        student_answers = data[["1-a", "1-b", "1-c", "1-d", "1-e"]]
+        student_answers = data[["1 - a", "1 - b", "1 - c", "1 - d", "1 - e"]]
         st.dataframe(student_answers, hide_index=True)
