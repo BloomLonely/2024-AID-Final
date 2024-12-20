@@ -394,3 +394,7 @@ if student_id:
         st.write(f"No data found for email: {student_id}")
         
 st.write(solution1)
+
+st.subheader("Student's Answer")
+student_answers = data[["1-a", "1-b", "1-c", "1-d", "1-e"]]
+st.dataframe(student_answers, hide_index=True)
