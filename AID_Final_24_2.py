@@ -8,7 +8,7 @@ import requests
 # headers = {"Authorization": f"token {github_token}"}
 
 exam_title = "2024 Fall Artificial Intelligence Design"
-fname = "AID_Midterm_Grading.xlsx"
+fname = "AID_Final_Grading.xlsx"
 #response = requests.get(fname, headers=headers)
 solution = '''
 ## Solution
