@@ -220,7 +220,7 @@ solution4 = '''
     k-fold cross-validation splits the dataset into k folds, trains the model on k-1 folds,
     validates on the remaining fold, and averages the results for a robust performance estimate.
 '''
-soultion5 = '''
+solution5 = '''
 #### 5. (10p)
     (a) - 6p
     (1)-Y, (2)-Z, (3)-X
