@@ -13,7 +13,7 @@ fname = "AID_Final_Grading.xlsx"
 solution = '''
 ## Solution
 #### 1. (10p - 2p each)
-    **(a)** **T**
+    (a) T
     (b) F
     (c) F
     (d) F
@@ -70,7 +70,7 @@ solution = '''
      
 
 #### 6. (14p)
-    (a) - 4p
+    **(a) - 4p**
     false positive: 25 (Predicted class: yes, True class: no)
     true negative: 375 (Predicted class: no, True class: no)
     
