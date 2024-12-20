@@ -13,7 +13,7 @@ fname = "AID_Final_Grading.xlsx"
 solution = '''
 ## Solution
 #### 1. (10p - 2p each)
-    (a) T
+    **(a) T**
     (b) F
     (c) F
     (d) F
