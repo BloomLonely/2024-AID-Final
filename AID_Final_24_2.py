@@ -252,6 +252,7 @@ st.write(solution1)
 if student_id:
     if data is not None:
         st.subheader("Question1. Student's Detailed Score")
+        st.markdown("#### Question1. Student's Detailed Score")
         student_answers = data[["1 - a", "1 - b", "1 - c", "1 - d", "1 - e", "1 - 10p"]].copy()
         st.dataframe(student_answers, hide_index=True)
 
